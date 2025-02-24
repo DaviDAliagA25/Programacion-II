@@ -16,12 +16,12 @@ class Punto {
 }
 
 class Linea extends JPanel {
-    Punto p1, p2;
+    public Punto p1, p2;
 
     public Linea(Punto p1, Punto p2) {
         this.p1 = p1;
         this.p2 = p2;
-        setPreferredSize(new Dimension(400, 400)); 
+        setPreferredSize(new Dimension(450, 450)); 
     }
 
     @Override
@@ -29,10 +29,10 @@ class Linea extends JPanel {
         super.paintComponent(g);
         g.setColor(Color.BLUE);
         
-        double p1x = p1.x * 10;
-        double p1y = p1.y * 10;
-        double p2x = p2.x * 10;
-        double p2y = p2.y * 10;
+        float p1x = p1.x * 10;
+        float p1y = p1.y * 10;
+        float p2x = p2.x * 10;
+        float p2y = p2.y * 10;
         g.drawLine((int)p1x, (int)p1y, (int)p2x, (int)p2y);
     }
 
